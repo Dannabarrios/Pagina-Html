@@ -393,7 +393,121 @@ estudiar &lt;em&gt;todos los días&lt;/em&gt;.&lt;/p&gt;</pre>
 
   </div>
 </section>
-    // aqui termina lo que hice
+    <section class="category-section" id="formularios">
+  <div class="category-header">
+    <span class="category-icon"></span>
+    <div>
+      <h2>Etiquetas de Formularios</h2>
+      <p>Recopilan datos del usuario para enviarlos al servidor.</p>
+    </div>
+  </div>
+  <div class="tags-grid">
+
+    <div class="tag-card">
+      <div class="tag-card-header">
+        <span class="tag-name">&lt;form&gt;</span>
+        <span class="tag-badge">Contenedor</span>
+      </div>
+      <div class="tag-card-body">
+        <div class="info-block"><h4> Definición</h4>
+          <p>Envuelve todos los controles de un formulario y define cómo se envían los datos.</p>
+        </div>
+        <div class="info-block"><h4> Sintaxis</h4>
+          <pre>&lt;form action="/enviar" method="post"&gt;
+  ...controles...
+&lt;/form&gt;</pre>
+        </div>
+        <div class="info-block"><h4> Buenas prácticas</h4>
+          <ul>
+            <li>Siempre especificar method (get/post).</li>
+            <li>Usar novalidate solo con validación propia.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="tag-card">
+      <div class="tag-card-header">
+        <span class="tag-name">&lt;input&gt;</span>
+        <span class="tag-badge">Campo</span>
+      </div>
+      <div class="tag-card-body">
+        <div class="info-block"><h4> Definición</h4>
+          <p>Control más versátil de HTML. Su comportamiento cambia con el atributo type.</p>
+        </div>
+        <div class="info-block"><h4> Sintaxis</h4>
+          <pre>&lt;input type="text" placeholder="Tu nombre"&gt;
+&lt;input type="email" required&gt;
+&lt;input type="password"&gt;
+&lt;input type="checkbox"&gt;
+&lt;input type="radio" name="g1"&gt;</pre>
+        </div>
+        <div class="info-block"><h4> Demo visual</h4>
+          <div class="demo-box" style="display:flex;flex-direction:column;gap:.4rem;">
+            <input type="text" placeholder="Texto" style="padding:.3rem .6rem;border:1px solid #ffadd2;border-radius:6px;font-size:.82rem;"/>
+            <input type="email" placeholder="Email" style="padding:.3rem .6rem;border:1px solid #ffadd2;border-radius:6px;font-size:.82rem;"/>
+          </div>
+        </div>
+        <div class="info-block"><h4>Buenas prácticas</h4>
+          <ul>
+            <li>Asociar siempre un &lt;label&gt; con cada input.</li>
+            <li>Usar el type correcto para mejor UX móvil.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="tag-card">
+      <div class="tag-card-header">
+        <span class="tag-name">&lt;select&gt; + &lt;option&gt;</span>
+        <span class="tag-badge">Desplegable</span>
+      </div>
+      <div class="tag-card-body">
+        <div class="info-block"><h4> Definición</h4>
+          <p>Crea un menú desplegable con opciones predefinidas.</p>
+        </div>
+        <div class="info-block"><h4>Sintaxis</h4>
+          <pre>&lt;select name="nivel"&gt;
+  &lt;option value="basico"&gt;Básico&lt;/option&gt;
+  &lt;option value="intermedio"&gt;Intermedio&lt;/option&gt;
+  &lt;option value="avanzado"&gt;Avanzado&lt;/option&gt;
+&lt;/select&gt;</pre>
+        </div>
+        <div class="info-block"><h4>Demo visual</h4>
+          <div class="demo-box">
+            <select style="padding:.3rem .6rem;border:1px solid #ffadd2;border-radius:6px;font-size:.82rem;">
+              <option>Básico</option><option>Intermedio</option><option>Avanzado</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tag-card">
+      <div class="tag-card-header">
+        <span class="tag-name">&lt;textarea&gt;</span>
+        <span class="tag-badge">Área de texto</span>
+      </div>
+      <div class="tag-card-body">
+        <div class="info-block"><h4>Definición</h4>
+          <p>Campo de texto multilínea para mensajes largos o comentarios.</p>
+        </div>
+        <div class="info-block"><h4> Sintaxis</h4>
+          <pre>&lt;textarea rows="4"
+  placeholder="Escribe aquí..."&gt;
+&lt;/textarea&gt;</pre>
+        </div>
+        <div class="info-block"><h4>Buenas prácticas</h4>
+          <ul>
+            <li>Definir tamaño con CSS en lugar de rows/cols.</li>
+            <li>Añadir maxlength para limitar caracteres.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
   </main>
 
 </div>
