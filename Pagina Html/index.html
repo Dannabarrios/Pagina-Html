@@ -584,22 +584,22 @@ estudiar &lt;em&gt;todos los días&lt;/em&gt;.&lt;/p&gt;</pre>
         <span class="tag-badge">Imagen</span>
       </div>
       <div class="tag-card-body">
-        <div class="info-block"><h4>📖 Definición</h4>
+        <div class="info-block"><h4> Definición</h4>
           <p>Inserta una imagen. Es una etiqueta vacía, no tiene cierre.</p>
         </div>
-        <div class="info-block"><h4>💻 Sintaxis</h4>
+        <div class="info-block"><h4> Sintaxis</h4>
           <pre>&lt;img src="foto.jpg"
      alt="Descripción"
      width="300"
      height="200"&gt;</pre>
         </div>
-        <div class="info-block"><h4>🎨 Demo visual</h4>
+        <div class="info-block"><h4> Demo visual</h4>
           <div class="demo-box" style="text-align:center;">
             <div style="width:120px;height:80px;background:linear-gradient(135deg,#ffd6e7,#ffadd2);border-radius:8px;display:inline-flex;align-items:center;justify-content:center;font-size:2rem;">🌸</div>
             <p style="font-size:.75rem;margin-top:.4rem;color:#8c8c8c;">Representación de &lt;img&gt;</p>
           </div>
         </div>
-        <div class="info-block"><h4>✅ Buenas prácticas</h4>
+        <div class="info-block"><h4> Buenas prácticas</h4>
           <ul>
             <li>El atributo alt es OBLIGATORIO para accesibilidad.</li>
             <li>Especificar width y height para evitar saltos.</li>
@@ -689,6 +689,86 @@ estudiar &lt;em&gt;todos los días&lt;/em&gt;.&lt;/p&gt;</pre>
 
   </div>
 </section>
+    <section class="form-section" id="practica">
+      <div class="form-header">
+        <h2>🌸 Formulario de Contacto — Demo Funcional</h2>
+        <p>Este formulario usa: form, input, select, textarea, label y button.</p>
+      </div>
+      <div class="form-inner">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" placeholder="Ej. Emily García" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" placeholder="email@ejemplo.com" required />
+          </div>
+          <div class="form-group">
+            <label for="nivel">Nivel de HTML</label>
+            <select id="nivel">
+              <option value="">— Selecciona —</option>
+              <option value="basico"> Básico</option>
+              <option value="intermedio"> Intermedio</option>
+              <option value="avanzado">🌸 Avanzado</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="fecha">Fecha de inicio</label>
+            <input type="date" id="fecha" />
+          </div>
+          <div class="form-group full">
+            <label>¿Cómo aprendes mejor?</label>
+            <div class="form-radios">
+              <label><input type="radio" name="estilo" value="visual" />  Visual</label>
+              <label><input type="radio" name="estilo" value="practico" />  Práctico</label>
+              <label><input type="radio" name="estilo" value="lectura" />  Lectura</label>
+            </div>
+          </div>
+          <div class="form-group full">
+            <label>Etiquetas favoritas</label>
+            <div style="display:flex;gap:.6rem;flex-wrap:wrap;padding:.4rem 0;">
+              <label style="font-size:.85rem;font-weight:600;display:flex;align-items:center;gap:.3rem;cursor:pointer;text-transform:none;letter-spacing:0;">
+                <input type="checkbox" value="formularios"> Formularios
+              </label>
+              <label style="font-size:.85rem;font-weight:600;display:flex;align-items:center;gap:.3rem;cursor:pointer;text-transform:none;letter-spacing:0;">
+                <input type="checkbox" value="tablas"> Tablas
+              </label>
+              <label style="font-size:.85rem;font-weight:600;display:flex;align-items:center;gap:.3rem;cursor:pointer;text-transform:none;letter-spacing:0;">
+                <input type="checkbox" value="multimedia"> Multimedia
+              </label>
+              <label style="font-size:.85rem;font-weight:600;display:flex;align-items:center;gap:.3rem;cursor:pointer;text-transform:none;letter-spacing:0;">
+                <input type="checkbox" value="semantica"> Semántica
+              </label>
+            </div>
+          </div>
+          <div class="form-group full">
+            <label for="mensaje">Mensaje o pregunta</label>
+            <textarea id="mensaje" placeholder="¿Tienes alguna duda sobre HTML?"></textarea>
+          </div>
+        </div>
+        <button class="btn-submit" onclick="enviarFormulario()">Enviar formulario 🌸</button>
+        <div class="form-success" id="success-msg">
+           ¡Mensaje enviado! Gracias por aprender HTML con nosotras 🌸
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <p>Hecho con 🌸 por <strong>Emily &amp; tú</strong> — Actividad 3: Blog Educativo HTML</p>
+  <p style="margin-top:.3rem;font-size:.76rem;">HTML5 + CSS3 · Sin frameworks · Diseño propio</p>
+  <div class="footer-links">
+    <a href="#estructurales">Estructurales</a>
+    <a href="#texto">Texto</a>
+    <a href="#listas">Listas</a>
+    <a href="#formularios">Formularios</a>
+    <a href="#tablas">Tablas</a>
+    <a href="#multimedia">Multimedia</a>
+  </div>
+</footer>
   </main>
 
 </div>
