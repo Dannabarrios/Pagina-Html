@@ -34,11 +34,6 @@ body {
   color: var(--gray-700);
   line-height: 1.7;
 }
-
-/* ================================
-   Sección de categorías
-=================================== */
-
 .category-section {
   background: var(--white);
   border: 1.5px solid var(--pink-100);
@@ -67,10 +62,6 @@ body {
   border-radius: var(--radius-sm);
   overflow: hidden;
 }
-/* ================================
-   Tarjetas de etiquetas (tags)
-=================================== */
-
 .tag-card-header {
   display: flex;
   align-items: center;
@@ -108,17 +99,9 @@ body {
   color: var(--pink-400);
   margin-bottom: .3rem;
 }
-/* ================================
-   Bloques de información
-=================================== */
-
 .info-block p, .info-block ul { font-size: .88rem; color: var(--gray-700); }
 .info-block ul { padding-left: 1.2rem; }
 .info-block ul li { margin-bottom: .15rem; }
-/* ================================
-   Código y demostraciones
-=================================== */
-
 pre {
   background: var(--gray-900);
   color: #f8c8d8;
@@ -145,19 +128,11 @@ pre {
 }
 .demo-box td { border: 1px solid var(--pink-100); padding: .35rem .7rem; }
 .demo-box tr:nth-child(even) td { background: var(--pink-50); }
-/* ================================
-   Media queries (responsividad)
-=================================== */
-
 @media (max-width: 768px) {
   .container { grid-template-columns: 1fr; }
   .sidebar { position: static; }
   nav { display: none; }
 }
-/* ================================
-   Header y navegación
-=================================== */
-
 header {
   background: var(--white);
   border-bottom: 2px solid var(--pink-100);
@@ -198,10 +173,6 @@ nav a:hover, nav a.active {
   background: var(--pink-100);
   color: var(--pink-600);
 }
-/* ================================
-   Hero (sección principal destacada)
-=================================== */
-
 .hero {
   background: linear-gradient(135deg, var(--pink-100) 0%, var(--white) 60%, var(--pink-50) 100%);
   padding: 4rem 1.5rem 3rem;
@@ -243,9 +214,6 @@ nav a:hover, nav a.active {
   color: var(--pink-500);
 }
 .stat span { font-size: .8rem; color: var(--gray-500); text-transform: uppercase; letter-spacing: .5px; }
-/* ================================
-   Layout principal (container + sidebar + main)
-=================================== */
 
 .container {
   max-width: 1100px;
@@ -286,9 +254,6 @@ nav a:hover, nav a.active {
   border-radius: var(--radius-sm);
   transition: background .2s, color .2s;
 }
-/* ================================
-   Formularios
-=================================== */
 .sidebar ul a:hover { background: var(--pink-50); color: var(--pink-500); }
 .main { display: flex; flex-direction: column; gap: 3rem; }
 .form-section {
@@ -363,10 +328,6 @@ textarea { resize: vertical; min-height: 90px; }
   margin-top: 1rem;
   text-align: center;
 }
-/* ================================
-   Footer
-=================================== */
-
 footer {
   background: var(--white);
   border-top: 2px solid var(--pink-100);
@@ -403,51 +364,198 @@ footer strong { color: var(--pink-500); }
   }
 }
 
-/* Celular */
-@media (max-width: 600px) {
+/* ===========================
+   DISEÑO RESPONSIVE "ANCHO TOTAL"
+   =========================== */
+
+@media screen and (max-width: 850px) {
+  /* Hacemos que el contenedor principal no tenga márgenes laterales excesivos */
+  .container {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 1rem 0.5rem !important; /* Reducimos márgenes laterales */
+    max-width: 100% !important;
+  }
+
+  /* El sidebar ahora es una lista ancha arriba */
+  .sidebar {
+    width: 100% !important;
+    margin-bottom: 2rem !important;
+    box-shadow: none !important;
+    border-radius: 0 !important; /* Estilo más limpio en móvil */
+  }
+
+  .sidebar ul {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 8px !important;
+  }
+
+  /* ESTO ARREGLA LOS BLOQUES DE ARRIBA (Etiquetas) */
+  .main {
+    width: 100% !important;
+    gap: 2rem !important;
+  }
+
+  .category-section {
+    border-radius: 0 !important; /* Para que ocupen todo el ancho visual */
+    border-left: none !important;
+    border-right: none !important;
+  }
+
+  .tags-grid {
+    padding: 1.5rem 0.8rem !important; /* Menos espacio a los lados para que la caja crezca */
+  }
+
+  .tag-card {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  /* Ajuste de textos para que no se amontonen */
+  .hero h1 {
+    font-size: 1.8rem !important;
+    padding: 0 10px;
+  }
+
+  /* El formulario (que ya te gustaba) se mantiene consistente */
+  .form-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Forzamos que el código (pre) no rompa el ancho del contenedor */
+  pre {
+    font-size: 0.75rem !important;
+    white-space: pre-wrap !important;
+    word-break: break-all !important;
+  }
+}
+
+/* Ajuste para celulares muy angostos (2 columnas en vez de 3) */
+@media screen and (max-width: 400px) {
   nav {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+@media screen and (max-width: 850px) {
+  /* ESTO OCULTA LA SIDEBAR SOLO EN CELULARES */
+  .sidebar {
+    display: none !important;
+  }
+
+  /* Ajustamos el contenedor para que el contenido principal 
+     ocupe todo el ancho ahora que no hay sidebar */
+  .container {
+    display: block !important; /* Cambiamos a block para evitar huecos del grid */
+    padding: 1rem !important;
+  }
+
+  .main {
+    width: 100% !important;
+  }
+}
+/* ESTO SOLO AFECTA A CELULARES (Menos de 850px) */
+@media screen and (max-width: 850px) {
+  
+  /* 1. Forzamos al contenedor del header a ser vertical para que el logo quede arriba */
+  .header-inner {
+    flex-direction: column !important;
+    height: auto !important;
+    padding: 1rem 0 !important;
+    align-items: center !important;
+  }
+
+  /* 2. FORZAMOS UNA SOLA HILERA (CINTA DESLIZANTE) */
+  nav {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important; /* <--- ESTO evita los dos renglones */
+    justify-content: flex-start !important; /* Alinea al inicio para poder deslizar */
+    overflow-x: scroll !important; /* Habilita el deslizamiento lateral */
+    width: 100% !important;
+    padding: 0.5rem 1.5rem !important;
+    gap: 10px !important;
+    
+    /* Ocultar barra de scroll para que se vea limpio */
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch; /* Deslizamiento suave en iPhone */
+  }
+
+  nav::-webkit-scrollbar {
+    display: none; /* Oculta scroll en Chrome/Safari */
+  }
+
+  /* 3. Ajuste de los botones para que no se deformen */
+  nav a {
+    flex: 0 0 auto !important; /* <--- CLAVE: evita que los botones se encojan o se amontonen */
+    white-space: nowrap !important; /* <--- CLAVE: evita que el texto salte de línea */
+    font-size: 0.8rem !important;
+    padding: 6px 15px !important;
+    border-radius: 20px !important;
+    border: 1.5px solid var(--pink-100) !important;
+    background: var(--white) !important;
+  }
+
+  /* Ocultamos la sidebar repetida en móvil como pediste antes */
+  .sidebar {
+    display: none !important;
+  }
+  
+  .container {
+    display: block !important;
+    padding: 1rem !important;
+  }
+}
+/* ESTO SOLO PARA CELULARES */
+@media screen and (max-width: 850px) {
+
+  /* 1. Preparamos el contenedor del menú */
+  nav {
+    position: relative !important;
+    padding-left: 45px !important; /* Espacio para que la flecha no tape el primer botón */
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* 2. La flecha indicadora AL INICIO */
+  nav::before {
+    content: "→" !important;
+    position: absolute !important; /* Se queda fija al inicio */
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--pink-500);
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    z-index: 20;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    animation: pointingRight 1.2s infinite; /* Animación de señalar */
+  }
+
+  /* 3. Animación para que la flecha "empuje" al usuario a deslizar */
+  @keyframes pointingRight {
+    0%, 100% { transform: translateY(-50%) translateX(0); opacity: 0.8; }
+    50% { transform: translateY(-50%) translateX(5px); opacity: 1; }
+  }
+
+  /* 4. Ocultar la barra de scroll para que se vea más limpio */
+  nav::-webkit-scrollbar {
     display: none;
   }
-  .header-inner {
-    justify-content: center;
-  }
-  .logo {
-    font-size: 1.2rem;
-  }
-  .hero {
-    padding: 2rem 1rem;
-  }
-  .hero h1 {
-    font-size: 1.6rem;
-  }
-  .hero-stats {
-    flex-direction: column;
-    gap: .8rem;
-  }
-  .category-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: .4rem;
-  }
-  .tags-grid {
-    padding: 1rem;
-  }
-  .tag-card-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: .4rem;
-  }
-  .form-grid {
-    grid-template-columns: 1fr;
-  }
-  .form-inner {
-    padding: 1rem;
-  }
-  .footer-links {
-    flex-direction: column;
-    gap: .5rem;
-  }
-  pre {
-    font-size: .72rem;
-  }
+}
+/* Corrección para que el video no sobresalga en celulares */
+video {
+  max-width: 100% !important; /* El video nunca será más ancho que su contenedor */
+  height: auto !important;     /* Mantiene la proporción de aspecto del video */
 }
