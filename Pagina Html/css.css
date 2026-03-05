@@ -34,6 +34,11 @@ body {
   color: var(--gray-700);
   line-height: 1.7;
 }
+
+/* ================================
+   Sección de categorías
+=================================== */
+
 .category-section {
   background: var(--white);
   border: 1.5px solid var(--pink-100);
@@ -62,6 +67,10 @@ body {
   border-radius: var(--radius-sm);
   overflow: hidden;
 }
+/* ================================
+   Tarjetas de etiquetas (tags)
+=================================== */
+
 .tag-card-header {
   display: flex;
   align-items: center;
@@ -99,9 +108,17 @@ body {
   color: var(--pink-400);
   margin-bottom: .3rem;
 }
+/* ================================
+   Bloques de información
+=================================== */
+
 .info-block p, .info-block ul { font-size: .88rem; color: var(--gray-700); }
 .info-block ul { padding-left: 1.2rem; }
 .info-block ul li { margin-bottom: .15rem; }
+/* ================================
+   Código y demostraciones
+=================================== */
+
 pre {
   background: var(--gray-900);
   color: #f8c8d8;
@@ -128,11 +145,19 @@ pre {
 }
 .demo-box td { border: 1px solid var(--pink-100); padding: .35rem .7rem; }
 .demo-box tr:nth-child(even) td { background: var(--pink-50); }
+/* ================================
+   Media queries (responsividad)
+=================================== */
+
 @media (max-width: 768px) {
   .container { grid-template-columns: 1fr; }
   .sidebar { position: static; }
   nav { display: none; }
 }
+/* ================================
+   Header y navegación
+=================================== */
+
 header {
   background: var(--white);
   border-bottom: 2px solid var(--pink-100);
@@ -173,6 +198,10 @@ nav a:hover, nav a.active {
   background: var(--pink-100);
   color: var(--pink-600);
 }
+/* ================================
+   Hero (sección principal destacada)
+=================================== */
+
 .hero {
   background: linear-gradient(135deg, var(--pink-100) 0%, var(--white) 60%, var(--pink-50) 100%);
   padding: 4rem 1.5rem 3rem;
@@ -214,6 +243,9 @@ nav a:hover, nav a.active {
   color: var(--pink-500);
 }
 .stat span { font-size: .8rem; color: var(--gray-500); text-transform: uppercase; letter-spacing: .5px; }
+/* ================================
+   Layout principal (container + sidebar + main)
+=================================== */
 
 .container {
   max-width: 1100px;
@@ -254,6 +286,9 @@ nav a:hover, nav a.active {
   border-radius: var(--radius-sm);
   transition: background .2s, color .2s;
 }
+/* ================================
+   Formularios
+=================================== */
 .sidebar ul a:hover { background: var(--pink-50); color: var(--pink-500); }
 .main { display: flex; flex-direction: column; gap: 3rem; }
 .form-section {
@@ -328,6 +363,10 @@ textarea { resize: vertical; min-height: 90px; }
   margin-top: 1rem;
   text-align: center;
 }
+/* ================================
+   Footer
+=================================== */
+
 footer {
   background: var(--white);
   border-top: 2px solid var(--pink-100);
