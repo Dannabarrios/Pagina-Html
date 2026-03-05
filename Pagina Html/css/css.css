@@ -554,8 +554,53 @@ footer strong { color: var(--pink-500); }
     display: none;
   }
 }
-/* Corrección para que el video no sobresalga en celulares */
-video {
-  max-width: 100% !important; /* El video nunca será más ancho que su contenedor */
-  height: auto !important;     /* Mantiene la proporción de aspecto del video */
-}
+/* Esto obliga al video a no salirse de su caja en celulares */
+  video, iframe, embed, object {
+    width: 100% !important;    /* Ocupa todo el ancho disponible */
+    height: auto !important;   /* Mantiene la proporción para que no se vea estirado */
+    max-width: 100% !important;
+    border-radius: 8px;        /* Opcional: para que combine con tus otros diseños */
+  }
+
+  /* Si el video está dentro de una caja de demo o info-block */
+  .demo-box, .info-block {
+    overflow: hidden !important; /* Corta cualquier cosa que intente salirse */
+  }
+  /* 2. ARREGLO PARA ELEMENTOS AMONTONADOS (Tablas o cuadros de demo) */
+  /* Devolvemos la tabla a su tamaño original */
+  /* 1. El contenedor (caja rosa) permite el scroll */
+  .demo-box {
+    width: 100% !important;
+    overflow-x: auto !important; /* Habilita el deslizamiento lateral */
+    display: block !important;
+    -webkit-overflow-scrolling: touch;
+    padding: 1rem !important;
+  }
+
+  /* 2. La TABLA: Forzamos que sea GRANDE */
+  .demo-box table {
+    display: table !important; /* Volvemos al modo tabla original */
+    width: 600px !important;   /* <--- Ajusta este número si la quieres aún más ancha */
+    min-width: 600px !important; 
+    border-collapse: collapse !important;
+    margin: 0 !important;
+  }
+
+  /* 3. Las celdas: Que el texto no se amontone */
+  .demo-box th, .demo-box td {
+    white-space: nowrap !important; /* Evita que el texto salte de línea y se vea apretado */
+    padding: 10px 15px !important;
+    text-align: left !important;
+  }
+  /* 3. ESPACIADO DE TEXTO (Para que las listas o párrafos no se peguen) */
+  .info-block {
+    margin-bottom: 1.5rem !important;
+  }
+
+  .info-block ul {
+    padding-left: 1rem !important; /* Más espacio para las viñetas */
+  }
+
+  .tag-card-body {
+    gap: 1.2rem !important; /* Separa los bloques de info internos */
+  }
