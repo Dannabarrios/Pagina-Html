@@ -568,7 +568,127 @@ estudiar &lt;em&gt;todos los días&lt;/em&gt;.&lt;/p&gt;</pre>
 
   </div>
 </section>
-    // Más categorías aquí...
+  <section class="category-section" id="multimedia">
+  <div class="category-header">
+    <span class="category-icon">🎨</span>
+    <div>
+      <h2>Etiquetas Multimedia</h2>
+      <p>Insertan imágenes, videos, audio y otros recursos visuales.</p>
+    </div>
+  </div>
+  <div class="tags-grid">
+
+    <div class="tag-card">
+      <div class="tag-card-header">
+        <span class="tag-name">&lt;img&gt;</span>
+        <span class="tag-badge">Imagen</span>
+      </div>
+      <div class="tag-card-body">
+        <div class="info-block"><h4>📖 Definición</h4>
+          <p>Inserta una imagen. Es una etiqueta vacía, no tiene cierre.</p>
+        </div>
+        <div class="info-block"><h4>💻 Sintaxis</h4>
+          <pre>&lt;img src="foto.jpg"
+     alt="Descripción"
+     width="300"
+     height="200"&gt;</pre>
+        </div>
+        <div class="info-block"><h4>🎨 Demo visual</h4>
+          <div class="demo-box" style="text-align:center;">
+            <div style="width:120px;height:80px;background:linear-gradient(135deg,#ffd6e7,#ffadd2);border-radius:8px;display:inline-flex;align-items:center;justify-content:center;font-size:2rem;">🌸</div>
+            <p style="font-size:.75rem;margin-top:.4rem;color:#8c8c8c;">Representación de &lt;img&gt;</p>
+          </div>
+        </div>
+        <div class="info-block"><h4>✅ Buenas prácticas</h4>
+          <ul>
+            <li>El atributo alt es OBLIGATORIO para accesibilidad.</li>
+            <li>Especificar width y height para evitar saltos.</li>
+            <li>Usar formatos modernos: WebP, AVIF.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="tag-card">
+      <div class="tag-card-header">
+        <span class="tag-name">&lt;video&gt;</span>
+        <span class="tag-badge">Video</span>
+      </div>
+      <div class="tag-card-body">
+        <div class="info-block"><h4>Definición</h4>
+          <p>Inserta un reproductor de video sin plugins externos.</p>
+        </div>
+        <div class="info-block"><h4> Sintaxis</h4>
+          <pre>&lt;video src="video.mp4"
+       controls
+       width="400"
+       poster="miniatura.jpg"&gt;
+  Tu navegador no soporta video.
+&lt;/video&gt;</pre>
+        </div>
+        <div class="info-block"><h4> Buenas prácticas</h4>
+          <ul>
+            <li>Siempre incluir controls para el usuario.</li>
+            <li>Añadir subtítulos con &lt;track&gt;.</li>
+            <li>Usar &lt;source&gt; para múltiples formatos.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="tag-card">
+      <div class="tag-card-header">
+        <span class="tag-name">&lt;audio&gt;</span>
+        <span class="tag-badge">Audio</span>
+      </div>
+      <div class="tag-card-body">
+        <div class="info-block"><h4> Definición</h4>
+          <p>Inserta un reproductor de audio. Soporta MP3, OGG y WAV.</p>
+        </div>
+        <div class="info-block"><h4> Sintaxis</h4>
+          <pre>&lt;audio controls&gt;
+  &lt;source src="cancion.mp3" type="audio/mpeg"&gt;
+  &lt;source src="cancion.ogg" type="audio/ogg"&gt;
+&lt;/audio&gt;</pre>
+        </div>
+        <div class="info-block"><h4> Buenas prácticas</h4>
+          <ul>
+            <li>Proveer mínimo 2 formatos para compatibilidad.</li>
+            <li>No usar autoplay sin permiso del usuario.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="tag-card">
+      <div class="tag-card-header">
+        <span class="tag-name">&lt;iframe&gt;</span>
+        <span class="tag-badge">Incrustado</span>
+      </div>
+      <div class="tag-card-body">
+        <div class="info-block"><h4> Definición</h4>
+          <p>Incrusta otra página web, mapa o video de YouTube dentro de la página.</p>
+        </div>
+        <div class="info-block"><h4>Sintaxis</h4>
+          <pre>&lt;iframe
+  src="https://youtu.be/1bcoeAALVgE?si=00gure2Ky8JAhTNs"
+  width="560" height="315"
+  allowfullscreen
+  title="Mi video"&gt;
+&lt;/iframe&gt;</pre>
+        </div>
+        <div class="info-block"><h4> Buenas prácticas</h4>
+          <ul>
+            <li>Siempre incluir atributo title.</li>
+            <li>Usar sandbox para limitar permisos.</li>
+            <li>Carga diferida con loading="lazy".</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
   </main>
 
 </div>
