@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTMLBlog  — Aprende Etiquetas HTML</title>
+  <title>HTMLBlog 🌸 — Aprende Etiquetas HTML</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css.css">
 </head>
@@ -48,7 +48,122 @@
   </aside>
 
   <main class="main">
-    <!-- Aquí van las secciones -->
+    <section class="category-section" id="estructurales">
+  <div class="category-header">
+    <span class="category-icon"> </span>
+    <div>
+      <h2>Etiquetas Estructurales</h2>
+      <p>Dan forma y semántica al esqueleto de una página web.</p>
+    </div>
+  </div>
+  <div class="tags-grid">
+
+    <div class="tag-card">
+      <div class="tag-card-header">
+        <span class="tag-name">&lt;html&gt;</span>
+        <span class="tag-badge">Raíz</span>
+      </div>
+      <div class="tag-card-body">
+        <div class="info-block"><h4> Definición</h4>
+          <p>Es el elemento raíz de todo documento HTML. Envuelve todo el contenido.</p>
+        </div>
+        <div class="info-block"><h4> Sintaxis</h4>
+          <pre>&lt;html lang="es"&gt;
+  ...contenido...
+&lt;/html&gt;</pre>
+        </div>
+        <div class="info-block"><h4> Buenas prácticas</h4>
+          <ul>
+            <li>Siempre incluir el atributo lang para accesibilidad.</li>
+            <li>Debe contener solo &lt;head&gt; y &lt;body&gt;.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="tag-card">
+      <div class="tag-card-header">
+        <span class="tag-name">&lt;head&gt;</span>
+        <span class="tag-badge">Metadatos</span>
+      </div>
+      <div class="tag-card-body">
+        <div class="info-block"><h4> Definición</h4>
+          <p>Contiene los metadatos: título, estilos y scripts. No se muestra en pantalla.</p>
+        </div>
+        <div class="info-block"><h4> Sintaxis</h4>
+          <pre>&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Mi página&lt;/title&gt;
+  &lt;link rel="stylesheet" href="css.css"&gt;
+&lt;/head&gt;</pre>
+        </div>
+        <div class="info-block"><h4> Buenas prácticas</h4>
+          <ul>
+            <li>Incluir siempre charset, viewport y title.</li>
+            <li>Cargar CSS antes de cerrar el &lt;head&gt;.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="tag-card">
+      <div class="tag-card-header">
+        <span class="tag-name">&lt;body&gt;</span>
+        <span class="tag-badge">Contenido</span>
+      </div>
+      <div class="tag-card-body">
+        <div class="info-block"><h4> Definición</h4>
+          <p>Contiene todo el contenido visible de la página.</p>
+        </div>
+        <div class="info-block"><h4> Sintaxis</h4>
+          <pre>&lt;body&gt;
+  &lt;h1&gt;Hola mundo&lt;/h1&gt;
+  &lt;p&gt;Bienvenido al blog.&lt;/p&gt;
+&lt;/body&gt;</pre>
+        </div>
+        <div class="info-block"><h4> Buenas prácticas</h4>
+          <ul>
+            <li>Solo puede haber un &lt;body&gt; por documento.</li>
+            <li>Cargar scripts antes de cerrar &lt;/body&gt;.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="tag-card">
+      <div class="tag-card-header">
+        <span class="tag-name">&lt;header&gt; &lt;main&gt; &lt;footer&gt;</span>
+        <span class="tag-badge">Semántica</span>
+      </div>
+      <div class="tag-card-body">
+        <div class="info-block"><h4> Definición</h4>
+          <p>Etiquetas semánticas que delimitan las zonas principales del sitio.</p>
+        </div>
+        <div class="info-block"><h4> Sintaxis</h4>
+          <pre>&lt;header&gt;🌸 Mi Blog&lt;/header&gt;
+&lt;main&gt;
+  &lt;p&gt;Contenido principal&lt;/p&gt;
+&lt;/main&gt;
+&lt;footer&gt;© 2025&lt;/footer&gt;</pre>
+        </div>
+        <div class="info-block"><h4> Demo visual</h4>
+          <div class="demo-box" style="display:flex;flex-direction:column;gap:.4rem;text-align:center;font-size:.8rem;">
+            <div style="background:#ffd6e7;padding:.4rem;border-radius:6px;font-weight:700;">HEADER 🌸</div>
+            <div style="background:#fff0f6;padding:.6rem;border-radius:6px;border:1px dashed #ffadd2;">MAIN — contenido</div>
+            <div style="background:#ffd6e7;padding:.4rem;border-radius:6px;font-weight:700;">FOOTER</div>
+          </div>
+        </div>
+        <div class="info-block"><h4> Buenas prácticas</h4>
+          <ul>
+            <li>Mejoran accesibilidad y SEO.</li>
+            <li>Reemplaza &lt;div id="header"&gt;.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
   </main>
 
 </div>
