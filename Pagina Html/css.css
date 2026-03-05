@@ -380,3 +380,74 @@ footer strong { color: var(--pink-500); }
 .footer-links { display: flex; justify-content: center; gap: 1.5rem; margin-top: .5rem; flex-wrap: wrap; }
 .footer-links a { text-decoration: none; color: var(--gray-500); transition: color .2s; }
 .footer-links a:hover { color: var(--pink-500); }
+/* ===========================
+   RESPONSIVE
+   =========================== */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    position: static;
+  }
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero-stats {
+    gap: 1rem;
+  }
+}
+
+/* Celular */
+@media (max-width: 600px) {
+  nav {
+    display: none;
+  }
+  .header-inner {
+    justify-content: center;
+  }
+  .logo {
+    font-size: 1.2rem;
+  }
+  .hero {
+    padding: 2rem 1rem;
+  }
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+  .hero-stats {
+    flex-direction: column;
+    gap: .8rem;
+  }
+  .category-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .4rem;
+  }
+  .tags-grid {
+    padding: 1rem;
+  }
+  .tag-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .4rem;
+  }
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-inner {
+    padding: 1rem;
+  }
+  .footer-links {
+    flex-direction: column;
+    gap: .5rem;
+  }
+  pre {
+    font-size: .72rem;
+  }
+}
