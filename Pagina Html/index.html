@@ -1,17 +1,25 @@
 <!DOCTYPE html>
+<!-- Documento HTML5 -->
+
 <html lang="es">
 <head>
+  <!-- Configuración de la página: título, caracteres, diseño responsive y conexión con fuentes y CSS -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTMLBlog 🌸 — Aprende Etiquetas HTML</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css.css">
 </head>
+
 <body>
+<!-- Contenido visible de la página -->
+
 <header>
+  <!-- Encabezado del sitio con logo y menú de navegación -->
   <div class="header-inner">
     <a href="#" class="logo">HTML<span>Blog</span> 🌸</a>
     <nav>
+      <!-- Enlaces a las diferentes secciones del blog -->
       <a href="#estructurales">Estructurales</a>
       <a href="#texto">Texto</a>
       <a href="#listas">Listas</a>
@@ -22,21 +30,29 @@
     </nav>
   </div>
 </header>
-  <section class="hero">
+
+<section class="hero">
+  <!-- Sección principal que presenta el objetivo del blog -->
   <span class="hero-badge"> Blog Educativo · HTML Tags</span>
   <h1>Aprende las etiquetas<br/><em>HTML</em> por categorías</h1>
   <p>Una guía completa y práctica para dominar las etiquetas HTML más importantes.</p>
+
   <div class="hero-stats">
+    <!-- Información destacada del contenido del sitio -->
     <div class="stat"><strong>20+</strong><span>etiquetas</span></div>
     <div class="stat"><strong>6</strong><span>categorías</span></div>
     <div class="stat"><strong>1</strong><span>formulario funcional</span></div>
   </div>
 </section>
+
 <div class="container">
+<!-- Contenedor principal que organiza el contenido en menú lateral y área principal -->
 
   <aside class="sidebar">
+    <!-- Barra lateral con las categorías del blog -->
     <p class="sidebar-title"> Categorías</p>
     <ul>
+      <!-- Enlaces que llevan a cada sección del contenido -->
       <li><a href="#estructurales"><span class="icon"></span> Estructurales</a></li>
       <li><a href="#texto"><span class="icon"></span> Texto</a></li>
       <li><a href="#listas"><span class="icon"></span> Listas</a></li>
@@ -48,23 +64,31 @@
   </aside>
 
   <main class="main">
+  <!-- Área principal donde se muestra el contenido de las categorías -->
+
     <section class="category-section" id="estructurales">
+    <!-- Sección que explica las etiquetas estructurales de HTML -->
       
   <div class="category-header">
+    <!-- Encabezado de la categoría -->
     <span class="category-icon"> </span>
     <div>
       <h2>Etiquetas Estructurales</h2>
       <p>Dan forma y semántica al esqueleto de una página web.</p>
     </div>
   </div>
+
   <div class="tags-grid">
+  <!-- Contenedor donde se muestran las tarjetas de cada etiqueta -->
 
     <div class="tag-card">
+      <!-- Tarjeta que explica la etiqueta <html> -->
       <div class="tag-card-header">
         <span class="tag-name">&lt;html&gt;</span>
         <span class="tag-badge">Raíz</span>
       </div>
       <div class="tag-card-body">
+        <!-- Información básica, sintaxis y buenas prácticas -->
         <div class="info-block"><h4> Definición</h4>
           <p>Es el elemento raíz de todo documento HTML. Envuelve todo el contenido.</p>
         </div>
@@ -83,6 +107,7 @@
     </div>
 
     <div class="tag-card">
+      <!-- Tarjeta que explica la etiqueta <head> -->
       <div class="tag-card-header">
         <span class="tag-name">&lt;head&gt;</span>
         <span class="tag-badge">Metadatos</span>
@@ -108,6 +133,7 @@
     </div>
 
     <div class="tag-card">
+      <!-- Tarjeta que explica la etiqueta <body> -->
       <div class="tag-card-header">
         <span class="tag-name">&lt;body&gt;</span>
         <span class="tag-badge">Contenido</span>
@@ -130,16 +156,22 @@
         </div>
       </div>
     </div>
-
     <div class="tag-card">
+<!-- Tarjeta que explica etiquetas semánticas principales de HTML -->
+
       <div class="tag-card-header">
+        <!-- Encabezado de la tarjeta con el nombre de las etiquetas -->
         <span class="tag-name">&lt;header&gt; &lt;main&gt; &lt;footer&gt;</span>
         <span class="tag-badge">Semántica</span>
       </div>
+
       <div class="tag-card-body">
+        <!-- Contenido informativo: definición, sintaxis, ejemplo y buenas prácticas -->
+
         <div class="info-block"><h4> Definición</h4>
           <p>Etiquetas semánticas que delimitan las zonas principales del sitio.</p>
         </div>
+
         <div class="info-block"><h4> Sintaxis</h4>
           <pre>&lt;header&gt;🌸 Mi Blog&lt;/header&gt;
 &lt;main&gt;
@@ -147,13 +179,16 @@
 &lt;/main&gt;
 &lt;footer&gt;© 2025&lt;/footer&gt;</pre>
         </div>
+
         <div class="info-block"><h4> Demo visual</h4>
+          <!-- Ejemplo visual de cómo se organizan header, main y footer -->
           <div class="demo-box" style="display:flex;flex-direction:column;gap:.4rem;text-align:center;font-size:.8rem;">
             <div style="background:#ffd6e7;padding:.4rem;border-radius:6px;font-weight:700;">HEADER 🌸</div>
             <div style="background:#fff0f6;padding:.6rem;border-radius:6px;border:1px dashed #ffadd2;">MAIN — contenido</div>
             <div style="background:#ffd6e7;padding:.4rem;border-radius:6px;font-weight:700;">FOOTER</div>
           </div>
         </div>
+
         <div class="info-block"><h4> Buenas prácticas</h4>
           <ul>
             <li>Mejoran accesibilidad y SEO.</li>
@@ -161,41 +196,54 @@
           </ul>
         </div>
       </div>
-    </div>
+</div>
 
-  </div>
+</div>
 </section>
+
 <section class="category-section" id="texto">
+<!-- Nueva sección dedicada a las etiquetas de texto -->
+
   <div class="category-header">
+    <!-- Encabezado de la categoría -->
     <span class="category-icon"></span>
     <div>
       <h2>Etiquetas de Texto</h2>
       <p>Formatean y estructuran el contenido textual del documento.</p>
     </div>
   </div>
+
   <div class="tags-grid">
+  <!-- Contenedor donde se muestran las tarjetas de etiquetas -->
 
     <div class="tag-card">
+      <!-- Tarjeta que explica los encabezados h1 a h6 -->
       <div class="tag-card-header">
         <span class="tag-name">&lt;h1&gt; — &lt;h6&gt;</span>
         <span class="tag-badge">Encabezados</span>
       </div>
+
       <div class="tag-card-body">
+        <!-- Información sobre definición, sintaxis y buenas prácticas -->
         <div class="info-block"><h4> Definición</h4>
           <p>Definen títulos y subtítulos. h1 es el más importante; h6 el menos.</p>
         </div>
+
         <div class="info-block"><h4> Sintaxis</h4>
           <pre>&lt;h1&gt;Título principal&lt;/h1&gt;
 &lt;h2&gt;Subtítulo&lt;/h2&gt;
 &lt;h3&gt;Sección&lt;/h3&gt;</pre>
         </div>
+
         <div class="info-block"><h4> Demo visual</h4>
+          <!-- Ejemplo visual de diferentes niveles de encabezados -->
           <div class="demo-box">
             <p style="font-size:1.4rem;font-weight:800;color:#c41d7f;">H1 — Título grande</p>
             <p style="font-size:1.1rem;font-weight:700;color:#eb2f96;">H2 — Subtítulo</p>
             <p style="font-size:.95rem;font-weight:600;color:#f759ab;">H3 — Sección pequeña</p>
           </div>
         </div>
+
         <div class="info-block"><h4> Buenas prácticas</h4>
           <ul>
             <li>Solo un &lt;h1&gt; por página para SEO.</li>
@@ -204,19 +252,24 @@
         </div>
       </div>
     </div>
-
-    <div class="tag-card">
+    <!-- Tarjetas que explican diferentes etiquetas de texto en HTML -->
+<div class="tag-card">
       <div class="tag-card-header">
         <span class="tag-name">&lt;p&gt;</span>
         <span class="tag-badge">Párrafo</span>
       </div>
+
+      <!-- Información básica sobre la etiqueta -->
       <div class="tag-card-body">
         <div class="info-block"><h4> Definición</h4>
           <p>Define un párrafo de texto con márgenes automáticos.</p>
         </div>
+
+        <!-- Ejemplo de uso de la etiqueta -->
         <div class="info-block"><h4> Sintaxis</h4>
           <pre>&lt;p&gt;Este es un párrafo de ejemplo.&lt;/p&gt;</pre>
         </div>
+
         <div class="info-block"><h4> Buenas prácticas</h4>
           <ul>
             <li>No anidar párrafos dentro de otros párrafos.</li>
@@ -224,53 +277,66 @@
           </ul>
         </div>
       </div>
-    </div>
+</div>
 
-    <div class="tag-card">
+<!-- Tarjeta que muestra etiquetas para dar énfasis al texto -->
+<div class="tag-card">
       <div class="tag-card-header">
         <span class="tag-name">&lt;strong&gt; &amp; &lt;em&gt;</span>
         <span class="tag-badge">Énfasis</span>
       </div>
+
       <div class="tag-card-body">
         <div class="info-block"><h4> Definición</h4>
           <p>&lt;strong&gt; indica importancia (negrita). &lt;em&gt; indica énfasis (cursiva).</p>
         </div>
+
         <div class="info-block"><h4> Sintaxis</h4>
           <pre>&lt;p&gt;Es &lt;strong&gt;muy importante&lt;/strong&gt;
 estudiar &lt;em&gt;todos los días&lt;/em&gt;.&lt;/p&gt;</pre>
         </div>
+
+        <!-- Ejemplo visual del resultado -->
         <div class="info-block"><h4> Demo visual</h4>
           <div class="demo-box">
             <p>Es <strong style="color:#c41d7f;">muy importante</strong> estudiar <em style="color:#eb2f96;">todos los días</em>.</p>
           </div>
         </div>
+
         <div class="info-block"><h4> Buenas prácticas</h4>
           <ul><li>Preferir strong/em sobre b/i por semántica.</li></ul>
         </div>
       </div>
-    </div>
+</div>
 
-    <div class="tag-card">
+<!-- Tarjeta que explica cómo crear enlaces en HTML -->
+<div class="tag-card">
       <div class="tag-card-header">
         <span class="tag-name">&lt;a&gt;</span>
         <span class="tag-badge">Enlace</span>
       </div>
+
       <div class="tag-card-body">
         <div class="info-block"><h4> Definición</h4>
           <p>Crea hipervínculos a otras páginas, archivos o secciones.</p>
         </div>
+
+        <!-- Ejemplo de sintaxis de enlace -->
         <div class="info-block"><h4> Sintaxis</h4>
           <pre>&lt;a href="https://developer.mozilla.org"
    target="_blank"&gt;
   Visita MDN 🌐
 &lt;/a&gt;</pre>
         </div>
+
+        <!-- Ejemplo visual del enlace -->
         <div class="info-block"><h4> Demo visual</h4>
           <div class="demo-box">
             <a href="https://developer.mozilla.org" target="_blank"
                style="color:#eb2f96;font-weight:700;">Visita MDN 🌐</a>
           </div>
         </div>
+
         <div class="info-block"><h4> Buenas prácticas</h4>
           <ul>
             <li>Usar texto descriptivo, no "haz clic aquí".</li>
@@ -278,10 +344,12 @@ estudiar &lt;em&gt;todos los días&lt;/em&gt;.&lt;/p&gt;</pre>
           </ul>
         </div>
       </div>
-    </div>
-  </div>
+</div>
+</div>
 </section>
-    <section class="category-section" id="listas">
+
+<!-- Sección dedicada a las etiquetas de listas -->
+<section class="category-section" id="listas">
   <div class="category-header">
     <span class="category-icon"> </span>
     <div>
@@ -289,17 +357,21 @@ estudiar &lt;em&gt;todos los días&lt;/em&gt;.&lt;/p&gt;</pre>
       <p>Organizan información en grupos ordenados o no ordenados.</p>
     </div>
   </div>
+
   <div class="tags-grid">
 
+    <!-- Tarjeta que explica listas no ordenadas -->
     <div class="tag-card">
       <div class="tag-card-header">
         <span class="tag-name">&lt;ul&gt; + &lt;li&gt;</span>
         <span class="tag-badge">No ordenada</span>
       </div>
+
       <div class="tag-card-body">
         <div class="info-block"><h4> Definición</h4>
           <p>&lt;ul&gt; crea una lista con viñetas. Cada elemento va en un &lt;li&gt;.</p>
         </div>
+
         <div class="info-block"><h4> Sintaxis</h4>
           <pre>&lt;ul&gt;
   &lt;li&gt;HTML&lt;/li&gt;
@@ -307,6 +379,8 @@ estudiar &lt;em&gt;todos los días&lt;/em&gt;.&lt;/p&gt;</pre>
   &lt;li&gt;JavaScript&lt;/li&gt;
 &lt;/ul&gt;</pre>
         </div>
+
+        <!-- Ejemplo visual de la lista -->
         <div class="info-block"><h4> Demo visual</h4>
           <div class="demo-box">
             <ul style="padding-left:1.2rem;">
@@ -314,6 +388,7 @@ estudiar &lt;em&gt;todos los días&lt;/em&gt;.&lt;/p&gt;</pre>
             </ul>
           </div>
         </div>
+
         <div class="info-block"><h4> Buenas prácticas</h4>
           <ul>
             <li>Usar cuando el orden no importa.</li>
@@ -323,15 +398,18 @@ estudiar &lt;em&gt;todos los días&lt;/em&gt;.&lt;/p&gt;</pre>
       </div>
     </div>
 
+    <!-- Tarjeta que explica listas ordenadas -->
     <div class="tag-card">
       <div class="tag-card-header">
         <span class="tag-name">&lt;ol&gt; + &lt;li&gt;</span>
         <span class="tag-badge">Ordenada</span>
       </div>
+
       <div class="tag-card-body">
         <div class="info-block"><h4> Definición</h4>
           <p>&lt;ol&gt; crea una lista numerada donde el orden tiene significado.</p>
         </div>
+
         <div class="info-block"><h4> Sintaxis</h4>
           <pre>&lt;ol&gt;
   &lt;li&gt;Abre VS Code&lt;/li&gt;
@@ -339,6 +417,8 @@ estudiar &lt;em&gt;todos los días&lt;/em&gt;.&lt;/p&gt;</pre>
   &lt;li&gt;Escribe tu código&lt;/li&gt;
 &lt;/ol&gt;</pre>
         </div>
+
+        <!-- Ejemplo visual de lista numerada -->
         <div class="info-block"><h4> Demo visual</h4>
           <div class="demo-box">
             <ol style="padding-left:1.2rem;">
@@ -346,6 +426,7 @@ estudiar &lt;em&gt;todos los días&lt;/em&gt;.&lt;/p&gt;</pre>
             </ol>
           </div>
         </div>
+
         <div class="info-block"><h4> Buenas prácticas</h4>
           <ul>
             <li>Usar para pasos o instrucciones.</li>
@@ -354,7 +435,18 @@ estudiar &lt;em&gt;todos los días&lt;/em&gt;.&lt;/p&gt;</pre>
         </div>
       </div>
     </div>
+    <!-- 
+Sección de contenido educativo que muestra distintas etiquetas HTML organizadas en tarjetas.
+Cada tarjeta explica una etiqueta con su definición, sintaxis, ejemplo visual y buenas prácticas.
+Las categorías incluidas aquí son: listas de definición, formularios y tablas.
+El objetivo es que el usuario pueda aprender cómo funcionan estas etiquetas mediante ejemplos prácticos.
+-->
 
+<div class="tag-card">
+      <div class="tag-card-header">
+        <span class="tag-name">&lt;dl&gt; &lt;dt&gt; &lt;dd&gt;</span>
+        <span class="tag-badge">Definición</span>
+      </div>
     <div class="tag-card">
       <div class="tag-card-header">
         <span class="tag-name">&lt;dl&gt; &lt;dt&gt; &lt;dd&gt;</span>
@@ -568,6 +660,13 @@ estudiar &lt;em&gt;todos los días&lt;/em&gt;.&lt;/p&gt;</pre>
 
   </div>
 </section>
+<!-- 
+Sección que muestra etiquetas HTML relacionadas con contenido multimedia.
+Incluye ejemplos de imágenes, video, audio e iframe, explicando su uso,
+sintaxis, demostración visual y buenas prácticas para utilizarlas en páginas web.
+-->
+
+<section class="category-section" id="multimedia">
   <section class="category-section" id="multimedia">
   <div class="category-header">
     <span class="category-icon">🎨</span>
@@ -697,6 +796,12 @@ estudiar &lt;em&gt;todos los días&lt;/em&gt;.&lt;/p&gt;</pre>
 
   </div>
 </section>
+<!-- 
+Sección final del blog que incluye un formulario de práctica para aplicar
+etiquetas HTML de formularios (input, select, textarea, radio, checkbox y button).
+También contiene el pie de página del sitio y la conexión con el archivo JavaScript
+que permite el funcionamiento del formulario.
+-->
     <section class="form-section" id="practica">
       <div class="form-header">
         <h2>🌸 Formulario de Contacto — Demo Funcional</h2>
