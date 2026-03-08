@@ -55,3 +55,37 @@ if (temaGuardado) {
     }
   });
 }
+// ===========================
+// FLOATING BUTTON
+// ===========================
+const floatingBtn  = document.getElementById('floatingBtn');
+const floatingIcon = document.getElementById('floatingIcon');
+
+// Mostrar botón solo cuando el usuario scrollea
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    floatingBtn.classList.add('visible');
+  } else {
+    floatingBtn.classList.remove('visible');
+  }
+
+  // Cambiar icono según posición
+  const mitadPagina = document.body.scrollHeight / 2;
+  if (window.scrollY < mitadPagina) {
+    floatingIcon.textContent = '⬇️'; // está arriba → bajar
+  } else {
+    floatingIcon.textContent = '⬆️'; // está abajo → subir
+  }
+});
+
+// Al hacer clic sube o baja según posición
+floatingBtn.addEventListener('click', () => {
+  const mitadPagina = document.body.scrollHeight / 2;
+  if (window.scrollY < mitadPagina) {
+    // Está arriba → va al final
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+  } else {
+    // Está abajo → va al inicio
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+});

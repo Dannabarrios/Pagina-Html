@@ -681,3 +681,41 @@ footer strong { color: var(--pink-500); }
   border-color: var(--pink-500);
   transform: scale(1.15);
 }
+/* ===========================
+   FLOATING BUTTON
+   =========================== */
+.floating-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--pink-400), var(--pink-500));
+  color: white;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(235,47,150,.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .2s, box-shadow .2s, opacity .3s;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.floating-btn.visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.floating-btn:hover {
+  transform: scale(1.1) translateY(-3px);
+  box-shadow: 0 8px 24px rgba(235,47,150,.45);
+}
+
+.floating-btn:active {
+  transform: scale(.95);
+}
