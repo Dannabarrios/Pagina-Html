@@ -1,26 +1,77 @@
-function enviarFormulario() {
-  const nombre = document.getElementById('nombre').value.trim();
-  const email  = document.getElementById('email').value.trim();
-  if (!nombre || !email) {
-    alert('⚠️ Por favor completa al menos el nombre y el correo.');
-    return;
-  }
-  const success = document.getElementById('success-msg');
-  success.style.display = 'block';
-  success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+function enviarFormulario(){
+
+const nombre = document.getElementById("nombre").value.trim();
+const email = document.getElementById("email").value.trim();
+const telefono = document.getElementById("tel").value.trim();
+const rol = document.getElementById("rol").value.trim();
+const nivel = document.getElementById("nivel").value;
+const mensaje = document.getElementById("mensaje").value.trim();
+
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const phoneRegex = /^[0-9]{10}$/;
+
+if(nombre === ""){
+alert("⚠️ Debes escribir tu nombre");
+return;
 }
 
-const sections = document.querySelectorAll('section[id]');
-const navLinks  = document.querySelectorAll('nav a');
-window.addEventListener('scroll', () => {
-  let current = '';
-  sections.forEach(s => {
-    if (window.scrollY >= s.offsetTop - 80) current = s.id;
-  });
-  navLinks.forEach(a => {
-    a.classList.remove('active');
-    if (a.getAttribute('href') === '#' + current) a.classList.add('active');
-  });
+if(!emailRegex.test(email)){
+alert("⚠️ Ingresa un correo válido");
+return;
+}
+
+if(telefono && !phoneRegex.test(telefono)){
+alert("⚠️ El teléfono debe tener 10 números");
+return;
+}
+
+if(rol === ""){
+alert("⚠️ Escribe o selecciona tu rol");
+return;
+}
+
+if(nivel === ""){
+alert("⚠️ Selecciona tu nivel de HTML");
+return;
+}
+
+if(mensaje.length < 5){
+alert("⚠️ Escribe un mensaje de al menos 5 caracteres");
+return;
+}
+
+const success = document.getElementById("success-msg");
+success.style.display = "block";
+
+success.scrollIntoView({
+behavior:"smooth",
+block:"center"
+});
+
+}
+
+const sections = document.querySelectorAll("section[id]");
+const navLinks  = document.querySelectorAll("nav a");
+
+window.addEventListener("scroll", () => {
+
+let current = "";
+
+sections.forEach(s => {
+if(window.scrollY >= s.offsetTop - 80){
+current = s.id;
+}
+});
+
+navLinks.forEach(a => {
+a.classList.remove("active");
+
+if(a.getAttribute("href") === "#" + current){
+a.classList.add("active");
+}
+
+});
+
 });
 // ===========================
 // SELECTOR DE TEMAS
@@ -72,9 +123,9 @@ window.addEventListener('scroll', () => {
   // Cambiar icono según posición
   const mitadPagina = document.body.scrollHeight / 2;
   if (window.scrollY < mitadPagina) {
-    floatingIcon.textContent = '⬇️'; // está arriba → bajar
+    floatingIcon.textContent = 'Bajar'; // está arriba → bajar
   } else {
-    floatingIcon.textContent = '⬆️'; // está abajo → subir
+    floatingIcon.textContent = 'Subir'; // está abajo → subir
   }
 });
 

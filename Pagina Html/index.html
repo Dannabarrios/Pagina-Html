@@ -816,72 +816,210 @@ etiquetas HTML de formularios (input, select, textarea, radio, checkbox y button
 También contiene el pie de página del sitio y la conexión con el archivo JavaScript
 que permite el funcionamiento del formulario.
 -->
+ </main>
+<br>
+<br>
     <section class="form-section" id="practica">
-      <div class="form-header">
-        <h2>🌸 Formulario de Contacto — Demo Funcional</h2>
-        <p>Este formulario usa: form, input, select, textarea, label y button.</p>
-      </div>
-      <div class="form-inner">
-        <div class="form-grid">
-          <div class="form-group">
-            <label for="nombre">Nombre completo</label>
-            <input type="text" id="nombre" placeholder="Ej. Emily García" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Correo electrónico</label>
-            <input type="email" id="email" placeholder="email@ejemplo.com" required />
-          </div>
-          <div class="form-group">
-            <label for="nivel">Nivel de HTML</label>
-            <select id="nivel">
-              <option value="">— Selecciona —</option>
-              <option value="basico"> Básico</option>
-              <option value="intermedio"> Intermedio</option>
-              <option value="avanzado">🌸 Avanzado</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="fecha">Fecha de inicio</label>
-            <input type="date" id="fecha" />
-          </div>
-          <div class="form-group full">
-            <label>¿Cómo aprendes mejor?</label>
-            <div class="form-radios">
-              <label><input type="radio" name="estilo" value="visual" />  Visual</label>
-              <label><input type="radio" name="estilo" value="practico" />  Práctico</label>
-              <label><input type="radio" name="estilo" value="lectura" />  Lectura</label>
-            </div>
-          </div>
-          <div class="form-group full">
-            <label>Etiquetas favoritas</label>
-            <div style="display:flex;gap:.6rem;flex-wrap:wrap;padding:.4rem 0;">
-              <label style="font-size:.85rem;font-weight:600;display:flex;align-items:center;gap:.3rem;cursor:pointer;text-transform:none;letter-spacing:0;">
-                <input type="checkbox" value="formularios"> Formularios
-              </label>
-              <label style="font-size:.85rem;font-weight:600;display:flex;align-items:center;gap:.3rem;cursor:pointer;text-transform:none;letter-spacing:0;">
-                <input type="checkbox" value="tablas"> Tablas
-              </label>
-              <label style="font-size:.85rem;font-weight:600;display:flex;align-items:center;gap:.3rem;cursor:pointer;text-transform:none;letter-spacing:0;">
-                <input type="checkbox" value="multimedia"> Multimedia
-              </label>
-              <label style="font-size:.85rem;font-weight:600;display:flex;align-items:center;gap:.3rem;cursor:pointer;text-transform:none;letter-spacing:0;">
-                <input type="checkbox" value="semantica"> Semántica
-              </label>
-            </div>
-          </div>
-          <div class="form-group full">
-            <label for="mensaje">Mensaje o pregunta</label>
-            <textarea id="mensaje" placeholder="¿Tienes alguna duda sobre HTML?"></textarea>
-          </div>
-        </div>
-        <button class="btn-submit" onclick="enviarFormulario()">Enviar formulario </button>
-        <div class="form-success" id="success-msg">
-           ¡Mensaje enviado! Gracias por aprender HTML con nosotras 
-        </div>
-      </div>
-    </section>
 
-  </main>
+<div class="form-header">
+<h2>🌸 Formulario de Contacto — Demo Funcional</h2>
+<p>Este formulario usa: form, input, select, textarea, label y button.</p>
+</div>
+
+<div class="form-inner">
+
+<div class="form-grid">
+
+<!-- DATOS PERSONALES -->
+<div class="form-group">
+<label for="nombre">Nombre completo</label>
+<input type="text" id="nombre" placeholder="Ej. Emily García" required>
+</div>
+
+<div class="form-group">
+<label for="email">Correo electrónico</label>
+<input type="email" id="email" placeholder="email@ejemplo.com" required>
+</div>
+
+<div class="form-group">
+<label for="tel">Teléfono de contacto</label>
+<input type="tel" id="tel" placeholder="+57 300..." pattern="[0-9]{10}">
+</div>
+
+<div class="form-group">
+<label for="web">Portafolio / GitHub (URL)</label>
+<input type="url" id="web" placeholder="https://github.com/tu-usuario">
+</div>
+
+
+<!-- PERFIL -->
+<div class="form-group">
+<label for="rol">Rol principal</label>
+<input list="roles" id="rol" placeholder="Escribe o selecciona...">
+
+<datalist id="roles">
+<option value="Frontend Developer">
+<option value="Backend Developer">
+<option value="UI/UX Designer">
+<option value="Fullstack Developer">
+</datalist>
+</div>
+
+<div class="form-group">
+<label for="nivel">Nivel de HTML</label>
+<select id="nivel">
+<option value="">— Selecciona —</option>
+<option value="basico">Básico</option>
+<option value="intermedio">Intermedio</option>
+<option value="avanzado">Avanzado</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="nivel-css">Nivel de CSS (0 - 100%)</label>
+<div class="range-container">
+<input type="range" id="nivel-css" min="0" max="100" step="10" value="50">
+</div>
+</div>
+
+<div class="form-group">
+<label for="fecha">Fecha de inicio</label>
+<input type="date" id="fecha">
+</div>
+
+
+<!-- PREFERENCIAS -->
+<div class="form-group">
+<label>Preferencia de Entorno</label>
+
+<div class="form-card-options">
+
+<label class="card-radio">
+<input type="radio" name="entorno" value="remoto" checked>
+<span>🏠 Remoto</span>
+</label>
+
+<label class="card-radio">
+<input type="radio" name="entorno" value="oficina">
+<span>🏢 Oficina</span>
+</label>
+
+<label class="card-radio">
+<input type="radio" name="entorno" value="hibrido">
+<span>☁️ Híbrido</span>
+</label>
+
+</div>
+</div>
+
+
+<div class="form-group">
+<label>Stack Tecnológico</label>
+
+<div class="checkbox-wrapper">
+
+<label class="chip">
+<input type="checkbox" value="js"> JavaScript
+</label>
+
+<label class="chip">
+<input type="checkbox" value="react"> React
+</label>
+
+<label class="chip">
+<input type="checkbox" value="figma"> Figma
+</label>
+
+<label class="chip">
+<input type="checkbox" value="sql"> SQL
+</label>
+
+</div>
+</div>
+
+
+<!-- APRENDIZAJE -->
+<div class="form-group">
+<label>¿Cómo aprendes mejor?</label>
+
+<div class="form-radios">
+
+<label>
+<input type="radio" name="estilo" value="visual"> Visual
+</label>
+
+<label>
+<input type="radio" name="estilo" value="practico"> Práctico
+</label>
+
+<label>
+<input type="radio" name="estilo" value="lectura"> Lectura
+</label>
+
+</div>
+</div>
+
+
+<div class="form-group">
+<label for="color-brand">Color de marca personal</label>
+<input type="color" id="color-brand" value="#ff69b4" style="height:45px;cursor:pointer;">
+</div>
+
+
+<!-- ARCHIVO -->
+<div class="form-group full">
+<label for="cv">Sube tu CV (PDF)</label>
+<input type="file" id="cv" accept=".pdf">
+</div>
+
+
+<!-- INTERESES -->
+<div class="form-group full">
+
+<label>Etiquetas favoritas</label>
+
+<div style="display:flex;gap:.6rem;flex-wrap:wrap;padding:.4rem 0;">
+
+<label style="display:flex;align-items:center;gap:.3rem;cursor:pointer;">
+<input type="checkbox" value="formularios"> Formularios
+</label>
+
+<label style="display:flex;align-items:center;gap:.3rem;cursor:pointer;">
+<input type="checkbox" value="tablas"> Tablas
+</label>
+
+<label style="display:flex;align-items:center;gap:.3rem;cursor:pointer;">
+<input type="checkbox" value="multimedia"> Multimedia
+</label>
+
+<label style="display:flex;align-items:center;gap:.3rem;cursor:pointer;">
+<input type="checkbox" value="semantica"> Semántica
+</label>
+
+</div>
+</div>
+
+
+<!-- MENSAJE -->
+<div class="form-group full">
+<label for="mensaje">Mensaje o pregunta</label>
+<textarea id="mensaje" placeholder="¿Tienes alguna duda sobre HTML?"></textarea>
+</div>
+
+</div>
+
+<button class="btn-submit" onclick="enviarFormulario()">
+Enviar formulario
+</button>
+
+<div class="form-success" id="success-msg">
+¡Mensaje enviado! Gracias por aprender HTML con nosotras 🌸
+</div>
+
+</div>
+</section>
+
+ 
 </div>
 
 <footer>
@@ -899,8 +1037,8 @@ que permite el funcionamiento del formulario.
   </main>
 
 </div>
-<button class="floating-btn" id="floatingBtn" title="Ir arriba / abajo">
-  <span id="floatingIcon"> </span>
+<button class="floating-btn" id="floatingBtn" title="Subir o bajar página">
+  <span id="floatingIcon">Bajar</span>
 </button>
   <script src="js/js.js"></script>
 </body>

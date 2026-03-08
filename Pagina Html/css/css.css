@@ -719,3 +719,48 @@ footer strong { color: var(--pink-500); }
 .floating-btn:active {
   transform: scale(.95);
 }
+
+.btn-submit{
+display:block;
+margin:30px auto;
+padding:12px 28px;
+font-size:16px;
+border-radius:8px;
+cursor:pointer;
+}
+@media (max-width:768px){
+
+.form-grid{
+grid-template-columns:1fr;
+}
+
+.form-header h2{
+font-size:22px;
+text-align:center;
+}
+
+.form-header p{
+text-align:center;
+font-size:14px;
+}
+
+.form-inner{
+padding:20px;
+}
+
+textarea{
+min-height:120px;
+}
+
+.btn-submit{
+width:100%;
+}
+
+}
+
+
+.form-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+}
