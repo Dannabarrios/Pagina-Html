@@ -604,3 +604,80 @@ footer strong { color: var(--pink-500); }
   .tag-card-body {
     gap: 1.2rem !important; /* Separa los bloques de info internos */
   }
+/* ===========================
+   TEMAS DE COLOR
+   =========================== */
+
+/* TEMA ROSA (por defecto) */
+[data-theme="pink"] {
+  --pink-50:  #fff0f6;
+  --pink-100: #ffd6e7;
+  --pink-200: #ffadd2;
+  --pink-300: #ff85c2;
+  --pink-400: #f759ab;
+  --pink-500: #eb2f96;
+  --pink-600: #c41d7f;
+}
+
+/* TEMA AZUL */
+[data-theme="blue"] {
+  --pink-50:  #e6f4ff;
+  --pink-100: #bae0ff;
+  --pink-200: #91caff;
+  --pink-300: #69b1ff;
+  --pink-400: #4096ff;
+  --pink-500: #1677ff;
+  --pink-600: #0958d9;
+}
+
+/* TEMA MORADO */
+[data-theme="purple"] {
+  --pink-50:  #f9f0ff;
+  --pink-100: #efdbff;
+  --pink-200: #d3adf7;
+  --pink-300: #b37feb;
+  --pink-400: #9254de;
+  --pink-500: #722ed1;
+  --pink-600: #531dab;
+}
+
+/* TEMA VERDE */
+[data-theme="green"] {
+  --pink-50:  #f6ffed;
+  --pink-100: #d9f7be;
+  --pink-200: #b7eb8f;
+  --pink-300: #95de64;
+  --pink-400: #73d13d;
+  --pink-500: #52c41a;
+  --pink-600: #389e0d;
+}
+
+/* Botones del selector */
+.theme-switcher {
+  display: flex;
+  gap: .4rem;
+  align-items: center;
+}
+
+.theme-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  background: var(--pink-100);
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .2s, border-color .2s;
+}
+
+.theme-btn:hover {
+  transform: scale(1.15);
+}
+
+.theme-btn.active {
+  border-color: var(--pink-500);
+  transform: scale(1.15);
+}

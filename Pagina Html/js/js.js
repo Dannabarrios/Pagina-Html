@@ -22,3 +22,36 @@ window.addEventListener('scroll', () => {
     if (a.getAttribute('href') === '#' + current) a.classList.add('active');
   });
 });
+// ===========================
+// SELECTOR DE TEMAS
+// ===========================
+const themeBtns = document.querySelectorAll('.theme-btn');
+
+themeBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+
+    // Quitar active de todos
+    themeBtns.forEach(b => b.classList.remove('active'));
+
+    // Poner active al clickeado
+    btn.classList.add('active');
+
+    // Cambiar el tema en el <html>
+    document.documentElement.setAttribute('data-theme', btn.dataset.theme);
+
+    // Guardar preferencia
+    localStorage.setItem('tema', btn.dataset.theme);
+  });
+});
+
+// Cargar tema guardado al abrir la página
+const temaGuardado = localStorage.getItem('tema');
+if (temaGuardado) {
+  document.documentElement.setAttribute('data-theme', temaGuardado);
+  themeBtns.forEach(btn => {
+    btn.classList.remove('active');
+    if (btn.dataset.theme === temaGuardado) {
+      btn.classList.add('active');
+    }
+  });
+}
