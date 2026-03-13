@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 5 – Lista dinámica</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 500px; margin: 40px auto; padding: 0 20px; }
+    .fila { display: flex; gap: 10px; margin-top: 10px; }
+    input {
+      flex: 1;
+      padding: 8px 12px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+    button {
+      padding: 8px 18px;
+      background: #ffadd2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover { background: #ffadd2; }
+    ul { list-style: none; padding: 0; margin-top: 20px; }
+    li {
+      padding: 10px 14px;
+      background: #f0f4ff;
+      border-radius: 8px;
+      margin-bottom: 8px;
+    }
+    a { display: inline-block; margin-top: 30px; color: #ffadd2; }
+  </style>
+</head>
+<body>
+  <h1>Ejercicio 5 – Lista dinámica</h1>
+
+  <div class="fila">
+    <input type="text" id="inputTarea" placeholder="Escribe una tarea">
+    <button id="btnAgregar">Agregar</button>
+  </div>
+
+  <ul id="lista"></ul>
+
+  <a href="index.html">← Volver al índice</a>
+
+  <script src="Ejercicio5.js"></script>
+</body>
+</html>

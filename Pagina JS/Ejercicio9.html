@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 9 – Temporizador</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 500px; margin: 40px auto; padding: 0 20px; text-align: center; }
+    #display {
+      font-size: 80px;
+      font-weight: bold;
+      color: #ffadd2;
+      margin: 20px 0;
+      letter-spacing: 4px;
+    }
+    .botones { display: flex; gap: 10px; justify-content: center; }
+    button {
+      padding: 10px 22px;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    #btnIniciar   { background: #ffadd2; }
+    #btnDetener   { background: #ffadd2; }
+    #btnReiniciar { background: #ffadd2; }
+    #estado { margin-top: 16px; font-size: 16px; color: #555; }
+    a { display: inline-block; margin-top: 30px; color: #ffadd2; }
+  </style>
+</head>
+<body>
+  <h1>Ejercicio 9 – Temporizador</h1>
+
+  <div id="display">00:00</div>
+
+  <div class="botones">
+    <button id="btnIniciar">Iniciar</button>
+    <button id="btnDetener">Detener</button>
+    <button id="btnReiniciar">Reiniciar</button>
+  </div>
+
+  <p id="estado">Presiona Iniciar para comenzar.</p>
+
+  <a href="index.html">← Volver al índice</a>
+
+  <script src="Ejercicio9.js"></script>
+</body>
+</html>
