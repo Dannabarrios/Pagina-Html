@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Problema 5 – Control Vehículos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <span class="topbar-brand">// problema-05 — control vehículos</span>
+  <a href="index.html">← Índice</a>
+</div>
+
+<div class="hero">
+  <div class="badge">PROBLEMA 05</div>
+  <h1>Control de <span>Vehículos</span></h1>
+  <p>Registra un vehículo y controla su velocidad. Monitorea su estado en tiempo real.</p>
+</div>
+
+<div class="main">
+
+  <div class="card">
+    <div class="card-title">Registrar vehículo</div>
+    <label>Placa del vehículo</label>
+    <input type="text" id="placaVehiculo" placeholder="Ej: ABC-123">
+    <label>Modelo</label>
+    <input type="text" id="modeloVehiculo" placeholder="Ej: Toyota Corolla">
+    <button class="btn" id="btnRegistrar">Registrar vehículo</button>
+    <div id="msgRegistrar" class="resultado"></div>
+  </div>
+
+  <div class="card" id="seccionControl" style="display:none">
+    <div class="card-title">Panel de control</div>
+    <div class="info-box" id="infoVehiculo"></div>
+
+    <label>Incremento / Decremento (km/h)</label>
+    <input type="number" id="incremento" placeholder="Ej: 20" min="1">
+
+    <div class="fila-btn">
+      <button class="btn verde" id="btnAcelerar"> Acelerar</button>
+      <button class="btn rojo"  id="btnFrenar"> Frenar</button>
+      <button class="btn gris"  id="btnDetener"> Detener</button>
+    </div>
+    <div id="estadoVehiculo" class="resultado"></div>
+  </div>
+
+</div>
+
+<div style="max-width:640px;margin:0 auto;padding:0 20px">
+  <a href="index.html" class="volver">← Volver al índice</a>
+</div>
+
+<script src="Problema5.js"></script>
+</body>
+</html>

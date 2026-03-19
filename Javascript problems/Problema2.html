@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Problema 2 – Inventario</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <span class="topbar-brand">// problema-02 — inventario tienda</span>
+  <a href="index.html">← Índice</a>
+</div>
+
+<div class="hero">
+  <div class="badge">PROBLEMA 02</div>
+  <h1>Inventario de <span>Tienda</span></h1>
+  <p>Registra productos con nombre, precio y cantidad. Consulta el valor total del inventario.</p>
+</div>
+
+<div class="main">
+
+  <div class="card">
+    <div class="card-title">Agregar producto</div>
+    <label>Nombre del producto</label>
+    <input type="text" id="nombreProd" placeholder="Ej: Laptop">
+    <label>Precio unitario</label>
+    <input type="number" id="precioProd" placeholder="Ej: 2500000">
+    <label>Cantidad en inventario</label>
+    <input type="number" id="cantidadProd" placeholder="Ej: 10">
+    <button class="btn" id="btnAgregar">Agregar producto</button>
+    <div id="msgAgregar" class="resultado"></div>
+  </div>
+
+  <div class="card" id="seccionInventario" style="display:none">
+    <div class="card-title">Inventario actual</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
+          <th>Valor total</th>
+        </tr>
+      </thead>
+      <tbody id="tablaInventario"></tbody>
+    </table>
+    <div id="totalInventario" class="resultado ok" style="margin-top:14px"></div>
+  </div>
+
+</div>
+
+<div style="max-width:640px;margin:0 auto;padding:0 20px">
+  <a href="index.html" class="volver">← Volver al índice</a>
+</div>
+
+<script src="Problema2.js"></script>
+</body>
+</html>

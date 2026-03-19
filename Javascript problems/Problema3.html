@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Problema 3 – Registro Estudiantes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <span class="topbar-brand">// problema-03 — registro estudiantes</span>
+  <a href="index.html">← Índice</a>
+</div>
+
+<div class="hero">
+  <div class="badge">PROBLEMA 03</div>
+  <h1>Registro de <span>Estudiantes</span></h1>
+  <p>Registra estudiantes con su nota final. El sistema determina si aprobó o reprobó el curso.</p>
+</div>
+
+<div class="main">
+
+  <div class="card">
+    <div class="card-title">Registrar estudiante</div>
+    <label>Nombre completo</label>
+    <input type="text" id="nombreEst" placeholder="Ej: Carlos Gómez">
+    <label>Identificación</label>
+    <input type="text" id="idEst" placeholder="Ej: 1001234567">
+    <label>Nota final (0 – 10)</label>
+    <input type="number" id="notaEst" placeholder="Ej: 7.5" min="0" max="10">
+    <button class="btn" id="btnRegistrar">Registrar estudiante</button>
+    <div id="msgRegistrar" class="resultado"></div>
+  </div>
+
+  <div class="card" id="seccionEstudiantes" style="display:none">
+    <div class="card-title">Estudiantes registrados</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>ID</th>
+          <th>Nota</th>
+          <th>Estado</th>
+        </tr>
+      </thead>
+      <tbody id="tablaEstudiantes"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<div style="max-width:640px;margin:0 auto;padding:0 20px">
+  <a href="index.html" class="volver">← Volver al índice</a>
+</div>
+
+<script src="Problema3.js"></script>
+</body>
+</html>

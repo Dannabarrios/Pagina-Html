@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Problema 6 – Sistema Biblioteca</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <span class="topbar-brand">// problema-06 — sistema biblioteca</span>
+  <a href="index.html">← Índice</a>
+</div>
+
+<div class="hero">
+  <div class="badge">PROBLEMA 06</div>
+  <h1>Sistema de <span>Biblioteca</span></h1>
+  <p>Registra libros, préstalos y devuélvelos. El sistema controla la disponibilidad de cada uno.</p>
+</div>
+
+<div class="main">
+
+  <div class="card">
+    <div class="card-title">Registrar libro</div>
+    <label>Título del libro</label>
+    <input type="text" id="tituloLibro" placeholder="Ej: El Principito">
+    <label>Autor</label>
+    <input type="text" id="autorLibro" placeholder="Ej: Antoine de Saint-Exupéry">
+    <button class="btn" id="btnRegistrar">Registrar libro</button>
+    <div id="msgRegistrar" class="resultado"></div>
+  </div>
+
+  <div class="card" id="seccionLibros" style="display:none">
+    <div class="card-title">Catálogo de libros</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Título</th>
+          <th>Autor</th>
+          <th>Estado</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody id="tablaLibros"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<div style="max-width:640px;margin:0 auto;padding:0 20px">
+  <a href="index.html" class="volver">← Volver al índice</a>
+</div>
+
+<script src="Problema6.js"></script>
+</body>
+</html>

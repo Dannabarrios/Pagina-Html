@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Problema 1 – Cuentas Bancarias</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <span class="topbar-brand">// problema-01 — cuentas bancarias</span>
+  <a href="index.html">← Índice</a>
+</div>
+
+<div class="hero">
+  <div class="badge">PROBLEMA 01</div>
+  <h1>Sistema de <span>Cuentas Bancarias</span></h1>
+  <p>Crea una cuenta, deposita, retira y consulta tu saldo. No podrás retirar más de lo disponible.</p>
+</div>
+
+<div class="main">
+
+  <!-- Crear cuenta -->
+  <div class="card">
+    <div class="card-title">Crear cuenta</div>
+    <label>Nombre del cliente</label>
+    <input type="text" id="nombreCliente" placeholder="Ej: María López">
+    <label>Saldo inicial</label>
+    <input type="number" id="saldoInicial" placeholder="Ej: 1000">
+    <button class="btn" id="btnCrear">Crear cuenta</button>
+    <div id="msgCrear" class="resultado"></div>
+  </div>
+
+  <!-- Operaciones -->
+  <div class="card" id="seccionOps" style="display:none">
+    <div class="card-title">Operaciones</div>
+    <div class="info-box" id="infoCliente"></div>
+    <label>Monto</label>
+    <input type="number" id="monto" placeholder="Ej: 200">
+    <div class="fila-btn">
+      <button class="btn verde" id="btnDepositar">Depositar</button>
+      <button class="btn rojo"  id="btnRetirar">Retirar</button>
+      <button class="btn gris"  id="btnConsultar">Ver saldo</button>
+    </div>
+    <div id="resultado" class="resultado"></div>
+  </div>
+
+</div>
+
+<div style="max-width:640px;margin:0 auto;padding:0 20px">
+  <a href="index.html" class="volver">← Volver al índice</a>
+</div>
+
+<script src="Problema1.js"></script>
+</body>
+</html>
